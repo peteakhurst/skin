@@ -1,0 +1,199 @@
+/* RedHatDisplay */
+@font-face {
+  font-family: 'RedHatDisplay';
+  src: url('./fonts/RedHatDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RedHatDisplayMedium';
+  src: url('./fonts/RedHatDisplay-Medium.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RedHatDisplaySemiBold';
+  src: url('./fonts/RedHatDisplay-SemiBold.woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* NantesWeb */
+@font-face {
+  font-family: 'NantesBoldItalic';
+  src: url('./fonts/NantesWeb-BoldItalic.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NantesItalic';
+  src: url('./fonts/NantesWeb-RegularItalic.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nantes';
+  src: url('./fonts/NantesWeb-Regular.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --clr-primary: hsla(137, 94%, 19%, 1);
+  --clr-accent: hsla(78, 44%, 85%, 1);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* If you forget the sematic role (can be turned off) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles (Turn off if nto wanted) */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Typography */
+
+h1 {
+  font-family: 'RedHatDisplay';
+}
+
+/* Header.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'RedHatDisplay', sans-serif;
+  font-weight: 600;
+}
+
+.navbar img {
+  width: 8em;
+  height: auto;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000; /* Ensure it's above the hero banner */
+}
+
+.hero-banner h1 {
+  font-size: clamp(1.75rem, 0.8191rem + 2.9787vw, 3.5rem);
+  font-family: 'RedHatDisplay', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.text-wrapper {
+  max-width: 52em;
+}
+
+.pretty-font {
+  font-family: 'NantesItalic', serif;
+  text-transform: uppercase;
+}
+
+/* HeroBanner.css */
+.hero-banner {
+  background-image: url('assets/headerImg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Minimum full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 20px; /* Add padding to adjust for smaller screens */
+}
+
+.hero-banner h1 {
+  font-size: 56px;
+}
+
+.shop-link {
+  position: absolute;
+  font-family: 'Nantes', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2em;
+  bottom: 5%;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 6px;
+  color: white;
+}
+
+.shop-link:hover {
+  color: var(--clr-accent);
+  border-color: var(--clr-accent);
+}
