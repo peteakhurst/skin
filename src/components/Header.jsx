@@ -1,27 +1,50 @@
-const Header = () => {
+import { useState, useEffect } from 'react';
+
+function Header() {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <header>
+    <header
+      style={{ top: visible ? '0' : '-100px', transition: 'top 0.5s ease' }}
+    >
       <nav>
         <div className='navbar'>
-          {/* <div>
+          <div className='left-nav'>
             <a href='#'>Shop</a>
             <a href='#'>About</a>
             <a href='#'>Our Farmers</a>
             <a href='#'>Ingredients</a>
-          </div> */}
-          <div className='img-wrapper'>
+          </div>
+          <div className='logo-wrapper'>
             <a href='#'>
               <img src='src/assets/logo.png' alt='Skin Logo' />
             </a>
           </div>
-          {/* <div>
+          <div className='right-nav'>
             <a href='#'>Account</a>
             <a href='#'>Cart (0)</a>
-          </div> */}
+          </div>
         </div>
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

@@ -1,4 +1,4 @@
-const Header = () => {
+function Header() {
   return (
     <div className='hero-banner'>
       <div className='text-wrapper'>
@@ -7,11 +7,11 @@ const Header = () => {
           to <span className='pretty-font'>attract</span>
         </h1>
       </div>
-      <a href='#shop-section' className='shop-link'>
+      <a href='#shop-section' className='animated-border shop-link'>
         Shop the range
       </a>
     </div>
   );
-};
+}
 
 export default Header;
