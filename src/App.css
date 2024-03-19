@@ -217,15 +217,6 @@ button {
   width: 100%;
 }
 
-.navbar a {
-  margin: 0 1rem;
-  align-items: center;
-}
-
-.left-links {
-  margin-right: auto;
-}
-
 .left-links,
 .right-links {
   display: flex;
@@ -238,6 +229,8 @@ button {
   text-transform: uppercase;
   font-family: 'RedHatDisplay', sans-serif;
   font-weight: 600;
+  margin: 0 1rem;
+  align-items: center;
 }
 
 .navbar img {
@@ -247,7 +240,7 @@ button {
 }
 
 .logo-wrapper {
-  margin-right: 20rem;
+  margin-right: 14rem;
   margin-left: 0;
 }
 
