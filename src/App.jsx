@@ -6,18 +6,22 @@ import ProductCardImage from './components/ProductCardImage';
 import './App.css';
 import ScrollingText from './components/ScrollingText';
 
+import ProductImage1 from './assets/productImg1.jpg';
+import ProductImage2 from './assets/productImg2.png';
+import ProductImage3 from './assets/productImg3.jpg';
+
 function App() {
   const products = [
     {
       id: 1,
-      imageUrl: 'assets/productimg1.jpg',
+      imageUrl: ProductImage1,
       productName: 'Goat glow milk',
       tagline: 'Gently cleanses oil',
       price: 60,
     },
     {
       id: 2,
-      imageUrl: 'assets/productImg2.png',
+      imageUrl: ProductImage2,
       productName: 'royal raw honey elixir',
       tagline: 'Restore radiance',
       price: 120,
@@ -41,7 +45,7 @@ function App() {
             />
           ))}
           <ProductCardImage
-            imageUrl='src/assets/productImg3.jpg'
+            imageUrl={ProductImage3}
             productName='tallow peptide cloud cream'
             tagline='Glow Complexion'
             price='90'
