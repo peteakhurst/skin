@@ -363,7 +363,6 @@ header {
   max-width: 1384px;
   margin: 50px 28px;
   display: flex;
-  flex-wrap: wrap;
   gap: 1em;
 }
 
