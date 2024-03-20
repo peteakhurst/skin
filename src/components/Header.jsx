@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Logo from '../assets/logo.png';
 
 function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -34,7 +35,7 @@ function Header() {
           </div>
           <div className='logo-wrapper'>
             <a href='#'>
-              <img src='src/assets/logo.png' alt='Skin Logo' />
+              <img src={Logo} alt='Skin Logo' />
             </a>
           </div>
           <div className='right-nav'>
