@@ -10,14 +10,14 @@ function App() {
   const products = [
     {
       id: 1,
-      imageUrl: 'src/assets/productimg1.jpg',
+      imageUrl: 'assets/productimg1.jpg',
       productName: 'Goat glow milk',
       tagline: 'Gently cleanses oil',
       price: 60,
     },
     {
       id: 2,
-      imageUrl: 'src/assets/productImg2.png',
+      imageUrl: 'assets/productImg2.png',
       productName: 'royal raw honey elixir',
       tagline: 'Restore radiance',
       price: 120,
